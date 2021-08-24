@@ -7,12 +7,9 @@
         <v-btn @click.stop="drawer = !drawer" text> MENU </v-btn>
       </span>
       <v-toolbar-items class="hidden-xs-only">
-        <v-btn to="/" text> <v-icon small left>fa-home</v-icon>Home </v-btn>
-        <v-btn to="store" text>
-          <v-icon small left>fa-shopping-basket</v-icon>Store
-        </v-btn>
-        <v-btn to="cart" text>
-          <v-icon small left>fa-shopping-cart</v-icon>Cart
+        <v-btn v-for="item in items" :key="item.title" :to="item.link" depressed>
+          <v-icon small left>fa-{{item.icon}}</v-icon>
+          {{item.title}}
         </v-btn>
       </v-toolbar-items>
     </v-app-bar>
