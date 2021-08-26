@@ -2,7 +2,7 @@
     <v-container>
         <v-row>
             <v-col sm="3" offset-lg="1">
-                Sidebar
+                <Sidebar />
             </v-col>
             <v-col sm="9" lg="7">
                 <ProductDisplay />
@@ -12,10 +12,12 @@
 </template>
 <script>
 import ProductDisplay from '../components/store/ProductDisplay.vue';
+import Sidebar from '../components/store/Sidebar.vue';
 
 export default {
     components: {
         ProductDisplay,
+        Sidebar,
     }   
 }
 </script>
