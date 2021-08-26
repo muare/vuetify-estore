@@ -1,6 +1,7 @@
 <template>
   <div>
-    <v-sheet v-if="$vuetify.breakpoint.smAndUp">
+    <v-sheet v-if="$vuetify.breakpoint.mdAndUp" :elevation="4" class="pa-4">
+      <h3>Filters</h3>
       <v-radio-group v-model="priceFilter" :mandatory="true">
         <v-radio
           v-for="(price, i) in prices"
@@ -12,7 +13,7 @@
     </v-sheet>
     <v-expansion-panels v-else>
       <v-expansion-panel>
-        <v-expansion-panel-header> Header </v-expansion-panel-header>
+        <v-expansion-panel-header> Filters </v-expansion-panel-header>
         <v-expansion-panel-content>
           <v-radio-group v-model="priceFilter" :mandatory="true">
             <v-radio
