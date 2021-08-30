@@ -2,7 +2,7 @@
   <v-card>
     <v-img :src="product.image" height="200px"> </v-img>
     <v-card-title>{{ product.name }}</v-card-title>
-    <v-card-subtitle>{{ product.price }}</v-card-subtitle>
+    <v-card-subtitle>${{ product.price }}</v-card-subtitle>
     <v-card-actions>
       <v-btn @click="addToCart" color="success" outlined>
         <v-icon left small>fa-plus</v-icon>
